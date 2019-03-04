@@ -161,7 +161,7 @@ class ReactFlagsSelect extends Component {
 								<input type="text" placeholder={this.props.searchPlaceholder} ref="filterText"  onChange={this.filterSearch}/>
 							</div>
 						}
-						{(this.state.filter ? Object.keys(this.state.filteredCountries).sort(function(a,b){return this.state.filteredCountries[a]-this.state.filteredCountries[b]}) : Object.keys(this.state.countries).sort(function(a,b){return this.state.countries[a]-this.state.countries[b]})).map( countryCode =>
+						{(this.state.filter ? Object.keys(this.state.filteredCountries).sort((a,b) => {return this.state.filteredCountries[a]-this.state.filteredCountries[b]}) : Object.keys(this.state.countries).sort((a,b) => {return this.state.countries[a]-this.state.countries[b]})).map( countryCode =>
 
 							<div className={`flag-option ${this.props.showOptionLabel ? 'has-label' : ''}`} key={countryCode} tabIndex="0" onClick={() => this.onSelect(countryCode)} onKeyUp={evt => this.onSelectWithKeyboard(evt, countryCode)}>
 								<span className="country-flag" style={{width: `${optionsSize}px`, height: `${optionsSize}px`}} >
