@@ -1,5 +1,5 @@
 export default ({
-    "AF": "",
+    "AF": "Afganistan",
     "AL": "Albania",
     "DZ": "Algeria",
     "AS": "Samoa Amerykańskie",
